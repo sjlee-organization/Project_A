@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -60,9 +61,23 @@ public class Unit : MonoBehaviour
         rigidbody2d.AddForce(dir*150, ForceMode2D.Force);
     }
 
-    public void ChangeFSM(UnitState newState)
+    public void ChangeFSM(UnitState newState, float delay = 0.0f)
     {
-        fsm.ChangeState(newState);
+        if (delay == 0.0f)
+            fsm.ChangeState(newState);
+        else
+        {
+            StartCoroutine(DelayCoroutine(() =>
+            {
+                fsm.ChangeState(newState);
+            }, delay));
+        }
+    }
+
+    IEnumerator DelayCoroutine(Action callback, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        callback?.Invoke();
     }
 }
 
@@ -119,7 +134,7 @@ public class HitState : FSM_State<Unit>
     public override void OnEnter()
     {
         owner.Hit();
-        owner.ChangeFSM(UnitState.Move);
+        owner.ChangeFSM(UnitState.Move, 1f);
     }
 
     public override void OnUpdate()
