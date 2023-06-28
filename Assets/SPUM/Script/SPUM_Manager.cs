@@ -2076,10 +2076,24 @@ public class SPUM_Manager : MonoBehaviour
 
         
     }
+    public void ShowSaveAlertPopup()
+    {
+        _saveText.text = "Unit_No";
+        _savePopObj.gameObject.SetActive(true);
+    }
+
+    public void CloseSaveAlertPopup()
+    {
+        _savePopObj.gameObject.SetActive(false);
+    }
+
     //프리팹 저장 부분
     public void SavePrefabs()
     {
-        if(_prefabUnitList.Count < _maxNumber)
+        CloseSaveAlertPopup();
+        _unitCode.text = _saveText.text;
+
+        if (_prefabUnitList.Count < _maxNumber)
         {
             string prefabName = _unitCode.text;
 
@@ -2605,6 +2619,10 @@ public class SPUM_Manager : MonoBehaviour
 
     public GameObject _noticeObj;
     public Text _noticeText;
+
+    public GameObject _savePopObj;
+    public Text _saveText;
+
     public List<GameObject> _buttonSet = new List<GameObject>();
     public int callbackNum = 0;
 
