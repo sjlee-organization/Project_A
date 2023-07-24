@@ -1,0 +1,37 @@
+﻿{
+   "Unit_10001_Name": {
+     "devName": "스켈레톤 하급 병사_10001",
+     "ko": "스켈레톤 하급 병사",
+     "en": "Skeleton Junior Soldier"
+   },
+   "Unit_10002_Name": {
+     "devName": "스켈레톤 상급 병사_10002",
+     "ko": "스켈레톤 상급 병사",
+     "en": "Skeleton Senior Soldier"
+   },
+   "Unit_10003_Name": {
+     "devName": "스켈레톤 지휘관_10003",
+     "ko": "스켈레톤 지휘관",
+     "en": "Skeleton Commander"
+   },
+   "Unit_11001_Name": {
+     "devName": "약탈자_11001",
+     "ko": "약탈자",
+     "en": "Pillager"
+   },
+   "Unit_11002_Name": {
+     "devName": "침입자_11002",
+     "ko": "침입자",
+     "en": "Intruder"
+   },
+   "Unit_11003_Name": {
+     "devName": "습격자_11003",
+     "ko": "습격자",
+     "en": "Raider"
+   },
+   "Unit_12001_Name": {
+     "devName": "악마 지휘관_12001",
+     "ko": "악마 지휘관",
+     "en": "Demon Commander"
+   }
+}

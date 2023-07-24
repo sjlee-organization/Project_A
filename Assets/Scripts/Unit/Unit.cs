@@ -9,6 +9,11 @@ public class Unit : MonoBehaviour
     private int maxHp;
     private int currentHp;
 
+    private int maxMp;
+    private int currentMp;
+
+    private float mpRecoveryTime;
+
     private int atk;
     private int def;
 
@@ -16,7 +21,6 @@ public class Unit : MonoBehaviour
     private float speed;
 
     private Rigidbody2D rigidbody2d;
-
 
     public float Speed => speed;
 
@@ -48,7 +52,7 @@ public class Unit : MonoBehaviour
 
     public virtual void Move()
     {
-
+            
     }
 
     public virtual void Hit()

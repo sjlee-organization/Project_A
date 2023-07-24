@@ -1,0 +1,10 @@
+﻿{
+   "min_weight": {
+     "devName": "최소 무게",
+     "Value": "0"
+   },
+   "max_weight": {
+     "devName": "최대 무게",
+     "Value": "1"
+   }
+}
