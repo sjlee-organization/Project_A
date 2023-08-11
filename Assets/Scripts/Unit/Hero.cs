@@ -24,4 +24,13 @@ public class Hero : Unit
             ChangeFSM(UnitState.Hit);
         }
     }
+
+    protected override void Update()
+    {
+        base.Update();
+        if(Input.GetMouseButtonDown(0))
+        {
+            Jump();
+        }
+    }
 }

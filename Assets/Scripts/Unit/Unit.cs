@@ -32,7 +32,7 @@ public class Unit : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         fsm.FSM_Update();
     }
@@ -63,6 +63,11 @@ public class Unit : MonoBehaviour
     protected virtual void KnockBack(Vector2 dir)
     {
         rigidbody2d.AddForce(dir*150, ForceMode2D.Force);
+    }
+
+    protected virtual void Jump()
+    {
+        rigidbody2d.AddForce(Vector2.up * 250, ForceMode2D.Force);
     }
 
     public void ChangeFSM(UnitState newState, float delay = 0.0f)
